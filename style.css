@@ -1,0 +1,2578 @@
+/* ===========================
+   FONTS
+=========================== */
+
+@font-face {
+    font-family: "RadioGrotesk";
+    src: url("fonts/RadioGrotesk-Regular.otf");
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("fonts/Coolvetica Rg.otf");
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: "Transforma Script";
+    src: url("fonts/TransformaScript-Medium.ttf");
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+}
+
+.cool{
+    font-family:"Coolvetica";
+}
+
+
+
+p,
+span,
+li{
+    font-family:"RadioGrotesk";
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"RadioGrotesk";
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#A8C7E7;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    height:85px;
+
+    background:#F4F0E1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:140px;
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    color:#97B9DF;
+
+    font-family:"RadioGrotesk";
+    font-size:1.5rem;
+
+    transition:.3s;
+}
+
+.navbar a:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:calc(100vh - 85px);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 8%;
+}
+
+/* LEFT */
+
+.hero-left{
+    max-width:750px;
+}
+
+.intro{
+
+    color:#F9F5E8;
+
+    font-family:"RadioGrotesk";
+    font-size:4.5rem;
+
+    margin-bottom:10px;
+}
+
+.name{
+
+    color:#F9F5E8;
+
+    font-family:"RadioGrotesk";
+
+    font-size:10rem;
+
+    line-height:.9;
+
+    margin-bottom:40px;
+}
+
+.role{
+
+    color:#F9F5E8;
+
+    font-family:"RadioGrotesk";
+    font-size:2.2rem;
+
+    margin-bottom:60px;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:15px 30px;
+
+    background:#F8F4E8;
+
+    color:#98B8DA;
+
+    border:2px solid #333;
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-family:"RadioGrotesk";
+
+    font-size:1.5rem;
+}
+
+.project-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 15px rgba(0,0,0,.15);
+}
+
+/* RIGHT */
+
+.hero-right{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.profile-circle{
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    border:8px solid #F9F5E8;
+
+    overflow:hidden;
+
+    background:#98B9DB;
+}
+
+.profile-circle img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    .name{
+        font-size:10rem;
+    }
+
+    .profile-circle{
+        width:350px;
+        height:350px;
+    }
+}
+
+@media(max-width:900px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        justify-content:center;
+
+        gap:50px;
+
+        text-align:center;
+
+        padding:50px 5%;
+    }
+
+    .navbar{
+
+        gap:50px;
+    }
+
+    .navbar a{
+        font-size:1.3rem;
+    }
+
+    .intro{
+        font-size:2.5rem;
+    }
+
+    .name{
+        font-size:7rem;
+    }
+
+    .role{
+        font-size:1.3rem;
+    }
+
+    .profile-circle{
+
+        width:260px;
+        height:260px;
+    }
+}
+
+.about-section{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:80px;
+
+    padding:100px 80px;
+
+    background:linear-gradient(
+        to bottom,
+        #A8C7E7 0%,
+        #F5F0E4 100%
+    );
+}
+
+/* LEFT */
+
+.left-column{
+    width:420px;
+}
+
+.about-title{
+    font-family:"RadioGrotesk";
+    font-size:5rem;
+    line-height:.9;
+
+    color:#F8F4E8;
+
+    margin-bottom:40px;
+}
+
+.polaroid-stack{
+    position:relative;
+    width:420px;
+    height:520px;
+}
+
+.polaroid-back{
+
+    position:absolute;
+
+    width:300px;
+    height:380px;
+
+    background:#F5F0E4;
+
+    border:1px solid #333;
+
+    border-radius:40px;
+
+    transform:rotate(8deg);
+
+    left:120px;
+    top:120px;
+}
+
+.polaroid-front{
+
+    position:absolute;
+
+    width:320px;
+    height:420px;
+
+    background:#F5F0E4;
+
+    border:1px solid #333;
+
+    border-radius:40px;
+
+    transform:rotate(-8deg);
+
+    padding:25px;
+}
+
+.polaroid-front img{
+
+    width:100%;
+    height:310px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    background:#99B9DB;
+}
+
+.portfolio-gallery-card{
+    width:100%;
+    margin-top:70px;
+    padding:18px 18px 14px;
+    border-radius:22px;
+    background:rgba(248, 244, 232, .86);
+    box-shadow:0 22px 42px rgba(58, 76, 98, .16);
+}
+
+.portfolio-gallery-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+}
+
+.portfolio-gallery-header span{
+    font-family:"RadioGrotesk";
+    font-size:1.45rem;
+    color:#4C5B6C;
+}
+
+.portfolio-preview{
+    padding:12px;
+    aspect-ratio:16 / 9;
+    border-radius:18px;
+}
+
+.portfolio-preview::after{
+    inset:12px;
+    border-radius:12px;
+}
+
+/* RIGHT */
+
+.right-column{
+    width:700px;
+}
+
+/* ABOUT CARD */
+
+.about-card{
+    position:relative;
+    overflow:visible;
+    border:0;
+    border-radius:22px;
+    background:rgba(248, 244, 232, .88);
+    margin-bottom:60px;
+    padding:44px 54px 48px;
+    box-shadow:0 24px 46px rgba(58, 76, 98, .18);
+}
+
+.about-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:28px;
+    bottom:28px;
+    width:8px;
+    border-radius:0 999px 999px 0;
+    background:#5BA8B3;
+}
+
+.about-card::after{
+    content:"";
+    position:absolute;
+    right:28px;
+    top:26px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:rgba(154, 187, 224, .45);
+    box-shadow:-18px 18px 0 rgba(91, 168, 179, .16);
+}
+
+.about-card .card-header{
+    display:none;
+}
+
+.card-header{
+    height:40px;
+    background:#98B8DA;
+    border-bottom:1px solid #333;
+}
+
+.card-body{
+    padding:0;
+    position:relative;
+    z-index:1;
+}
+
+.card-body h3{
+
+    font-family:"RadioGrotesk";
+    font-size:3.5rem;
+
+    color:#8DB3E0;
+
+    margin-bottom:20px;
+}
+
+.card-body p{
+
+    font-family:"RadioGrotesk";
+    font-size:1.2rem;
+    line-height:1.8;
+
+    color:#4E5968;
+
+    margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+.button-group{
+    display:flex;
+    gap:15px;
+}
+
+.about-btn{
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    background:#98B8DA;
+
+    border:1px solid #333;
+
+    border-radius:999px;
+
+    color:#F5F0E4;
+
+    font-family:"RadioGrotesk";
+}
+
+/* EDUCATION */
+
+.education-title{
+
+    font-family:"RadioGrotesk";
+    font-size:4rem;
+
+    color:#4E5968;
+
+    margin-bottom:25px;
+}
+
+.education-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:30px;
+
+    margin-bottom:40px;
+}
+
+.education-content{
+    flex:1;
+}
+
+.education-content h4{
+
+    font-family:"RadioGrotesk";
+    font-size:2rem;
+
+    color:#4E5968;
+
+    margin-bottom:10px;
+}
+
+.education-content span{
+
+    display:block;
+
+    font-family:"RadioGrotesk";
+    font-size:1.2rem;
+
+    margin-bottom:15px;
+
+    color:#4E5968;
+}
+
+.education-content p{
+
+    font-family:"RadioGrotesk";
+    font-size:1.1rem;
+    line-height:1.7;
+
+    color:#4E5968;
+}
+
+.education-item img{
+
+    width:160px;
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:35px;
+
+    border:1px solid #333;
+}
+
+/* ==========================
+   EXPERIENCE HUB
+========================== */
+
+.experience-hub{
+    height: calc(100vh - 85px); /* 85px = navbar height */
+
+    background:#F7F2E5;
+
+    padding:40px 80px;
+
+    box-sizing:border-box;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+/* TITLE */
+
+.experience-title{
+    font-family:"RadioGrotesk";
+    font-size:6rem;
+    color:#9ABBE0;
+
+    margin-top:0;
+    margin-bottom:40px;
+
+    line-height:0.9;
+}
+
+/* GRID */
+
+.experience-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+}
+
+/* CARD */
+
+.experience-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+}
+
+.experience-card img{
+    width:340px;
+    height:auto;
+
+    transition:.3s ease;
+}
+
+.experience-card:hover img{
+    transform:translateY(-10px) scale(1.03);
+}
+
+/* BUTTON */
+
+.experience-card button{
+
+    margin-top:25px;
+
+    width:290px;
+    height:70px;
+
+    border-radius:999px;
+
+
+    background:#9ABBE0;
+
+    color:#F8F4E8;
+
+    font-family:"RadioGrotesk";
+    font-size:2rem;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.experience-card:hover button{
+    transform:translateY(-3px);
+}
+
+/* ============================
+   WORKING EXPERIENCE
+============================ */
+
+
+#working-experience{
+    background:#AFCBE5;
+    padding:100px 70px;
+}
+
+.working-title{
+    font-family:"RadioGrotesk";
+    font-size:6rem;
+    color:#FFFBEF;
+    margin-bottom:60px;
+    line-height:0.9;
+}
+
+.script{
+    font-family:"RadioGrotesk";
+}
+
+.experience-container{
+    width:100%;
+}
+
+.experience-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.experience-row.reverse{
+    flex-direction:row;
+}
+
+/* CARD */
+
+.experience-card{
+    width:540px;
+    background:#F8F4E8;
+   
+}
+
+.card-header{
+    background:#98B8DA;
+
+    width:100%;
+
+    padding:15px 20px;
+
+    box-sizing:border-box;
+
+    color:#FFFBEF;
+
+    font-family:"RadioGrotesk";
+    font-size:2rem;
+
+    border-bottom:1px solid #444;
+}
+
+.card-content{
+    padding:15px 20px;
+}
+
+.card-content h4{
+    font-family:"RadioGrotesk";
+    font-weight:700;
+    color:#4F5B6A;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    font-family:"RadioGrotesk";
+    color:#5A6573;
+    line-height:1.8;
+    text-align:justify;
+}
+
+/* LOGOS */
+
+.company-logo{
+    width:250px;
+    object-fit:contain;
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .working-title{
+        font-size:4rem;
+        text-align:center;
+    }
+
+    .experience-row,
+    .experience-row.reverse{
+
+        flex-direction:column;
+
+        gap:25px;
+    }
+
+    .experience-card{
+        width:100%;
+    }
+
+    .company-logo{
+        width:180px;
+    }
+
+    .connector,
+    .reverse-connector{
+        display:none;
+    }
+}
+/* CARD */
+
+.experience-card{
+
+    width:540px;
+
+    background:#F7F2E5;
+
+}
+
+.card-header{
+
+    background:#98B8DA;
+
+    color:#F8F4E8;
+
+    padding:15px;
+
+    font-family:"RadioGrotesk";
+    font-size:2rem;
+
+    border-bottom:1px solid #3d4d5f;
+}
+
+.card-content{
+
+    padding:18px;
+}
+
+.card-content h4{
+
+    font-family:"RadioGrotesk";
+    font-size:1.4rem;
+
+    color:#4B5A6B;
+
+    margin-bottom:10px;
+}
+
+.card-content p{
+
+    font-family:"RadioGrotesk";
+    line-height:1.8;
+
+    color:#4B5A6B;
+}
+
+/* LOGO */
+
+.logo-container{
+
+    width:280px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-container img{
+
+    width:220px;
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.3s;
+}
+
+.logo-container img:hover{
+    transform:scale(1.05);
+}
+
+.projects-section{
+
+    background:#A8C7E7;
+
+    padding:80px 70px 120px;
+}
+
+.projects-title{
+
+    font-family:"RadioGrotesk";
+    font-size:6rem;
+
+    color:#F8F4E8;
+
+    margin-bottom:50px;
+}
+
+/* GRID */
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2, 1fr);
+
+    gap:60px 40px;
+}
+
+/* CARD */
+
+.project-card{
+    max-width:500px;
+}
+
+.project-preview{
+
+    position:relative;
+
+    background:#F7F2E5;
+
+    border:1px solid #3c4c5f;
+
+    border-radius:20px;
+
+    padding:18px;
+}
+
+.project-preview img{
+
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+}
+
+/* BUTTONS */
+
+.slider-btn{
+
+    position:absolute;
+
+    top:50%;
+    transform:translateY(-50%);
+
+    width:34px;
+    height:34px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#F7F2E5;
+
+    cursor:pointer;
+
+    font-size:1.4rem;
+}
+
+.left{
+    left:-18px;
+}
+
+.right{
+    right:-18px;
+}
+
+
+
+
+
+/* TEXT */
+
+.project-card h3{
+
+    font-family:"RadioGrotesk";
+    font-size:1.4rem;
+
+    color:#4C5B6C;
+
+    margin-bottom:12px;
+}
+
+.project-card p{
+
+    font-family:"RadioGrotesk";
+    line-height:1.8;
+
+    color:#4C5B6C;
+
+    margin-bottom:18px;
+}
+
+/* TAGS */
+
+.tags{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.tags span{
+
+    background:#4C5B6C;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-family:"RadioGrotesk";
+}
+
+/* PAPER */
+
+.paper-card{
+
+    width:420px;
+
+    margin:100px auto 0;
+
+    background:#F7F2E5;
+
+    border:1px solid #3c4c5f;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+}
+
+.paper-card h3{
+
+    font-family:"RadioGrotesk";
+    font-size:2rem;
+
+    color:#8FB2DB;
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+}
+
+.paper-btn{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    border-radius:999px;
+
+    background:#8FB2DB;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:"RadioGrotesk";
+}
+
+.projects-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2, 500px);
+
+    justify-content:center;
+
+    gap:70px 80px;
+}
+
+.project-card{
+    width:500px;
+}
+
+.project-info{
+    padding:12px 0 0;
+}
+
+.project-info h3{
+    margin-top:8px;
+}
+
+.project-footer{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:22px;
+}
+
+.details-btn{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:10px 18px;
+    border-radius:999px;
+    background:#F8F4E8;
+    border:1px solid rgba(76, 91, 108, .35);
+    color:#4C5B6C;
+    text-decoration:none;
+    font-family:"RadioGrotesk";
+    font-size:1rem;
+    box-shadow:0 10px 20px rgba(60, 76, 95, .12);
+    transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+
+.details-btn:hover{
+    transform:translateY(-3px);
+    background:#9ABBE0;
+    color:#F8F4E8;
+    box-shadow:0 14px 26px rgba(60, 76, 95, .18);
+}
+
+.contact-section{
+    position:relative;
+
+    padding:180px 0 120px;
+
+    background:linear-gradient(
+        to bottom,
+        #A8C7E7 0%,
+        #F7F2E5 100%
+    );
+
+    display:flex;
+    justify-content:center;
+}
+
+/* TITLE */
+
+.contact-title{
+
+    position:absolute;
+
+    top:40px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-family:"RadioGrotesk";
+    font-size:7rem;
+
+    color:#F8F4E8;
+
+    z-index:10;
+
+    white-space:nowrap;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#organization{
+    background:#F8F4E8;
+    padding:100px 80px;
+}
+
+.exp-title{
+    font-family:"Coolvetica";
+    font-size:7rem;
+    color:#9ABBE0;
+    line-height:0.8;
+    margin-bottom:80px;
+    
+}
+
+.transcript{
+    font-family:"Transforma Script";
+
+    font-size:1em;      /* same size as parent */
+    color:inherit;      /* inherit blue color */
+    line-height:inherit;
+
+    display:inline-block;
+}
+
+.org-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px;
+    justify-items:center;
+}
+
+.org-card{
+    width:280px;
+    height:340px;
+    perspective:1000px;
+}
+
+.org-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+
+    transition:transform .8s;
+    transform-style:preserve-3d;
+}
+
+/* Hover Flip */
+
+.org-card:hover .org-inner{
+    transform:rotateY(180deg);
+}
+
+/* Click Flip */
+
+.org-inner.flipped{
+    transform:rotateY(180deg);
+}
+
+.org-front,
+.org-back{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:30px;
+
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+
+    overflow:hidden;
+
+    border:2px solid #3b3b3b;
+}
+
+/* FRONT */
+
+.org-front{
+
+    background:#F8F4E8;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+}
+
+.org-front img{
+
+    width:180px;
+    height:180px;
+
+    object-fit:contain;
+
+    background:#98B8DA;
+
+    border-radius:20px;
+
+    padding:15px;
+}
+
+.org-front p{
+
+    font-family:"RadioGrotesk";
+    font-size:1.5rem;
+
+    color:#98B8DA;
+}
+
+/* BACK */
+
+.org-back{
+
+    background:#98B8DA;
+
+    color:white;
+
+    transform:rotateY(180deg);
+
+    padding:20px;
+
+    overflow-y:auto;
+}
+
+.org-back h3{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    font-family:"RadioGrotesk";
+}
+
+.org-back ul{
+
+    padding-left:18px;
+
+    line-height:1.6;
+
+    font-family:"RadioGrotesk";
+    font-size:.85rem;
+}
+
+.org-back li{
+    margin-bottom:10px;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    .org-grid{
+        grid-template-columns:1fr;
+    }
+
+    .org-title{
+        font-size:3rem;
+    }
+}
+
+.role-container{
+    height:3rem;
+    width:24ch;
+    margin-bottom:25px;
+}
+.role{
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:3px solid white;
+
+    width:0;
+    margin:0;
+
+animation:
+    typing 3s steps(24,end) forwards,
+    blink .7s step-end infinite;
+}
+
+@keyframes typing{
+    to{
+        width:24ch;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
+.hero-btn:hover,
+.about-btn:hover{
+
+    transform:scale(1.05);
+
+    transition:0.5s;
+}
+
+
+
+/* =====================
+   CONTACT SECTION
+===================== */
+
+.contact-section{
+    min-height:calc(100vh - 85px);
+
+    background:linear-gradient(
+        to bottom,
+        #AFCBE5 0%,
+        #F8F4E8 100%
+    );
+
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+;
+}
+
+/* TITLE */
+
+.contact-title{
+margin-bottom:-30px;
+
+    font-family:"RadioGrotesk";
+    font-size:7rem;
+
+    color:#F8F4E8;
+
+    z-index:2;
+}
+
+/* CARD */
+
+.contact-card{
+
+    width:min(720px, 92vw);
+
+    background:rgba(248, 244, 232, .88);
+
+    border:0;
+    border-radius:22px;
+
+    position:relative;
+
+    padding:44px 54px 48px;
+
+    box-sizing:border-box;
+    overflow:visible;
+    box-shadow:0 24px 46px rgba(58, 76, 98, .18);
+}
+
+.contact-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:28px;
+    bottom:28px;
+    width:8px;
+    border-radius:0 999px 999px 0;
+    background:#5BA8B3;
+}
+
+.contact-card::after{
+    content:"";
+    position:absolute;
+    right:28px;
+    top:26px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:rgba(154, 187, 224, .45);
+    box-shadow:-18px 18px 0 rgba(91, 168, 179, .16);
+}
+
+/* BLUE BAR */
+
+.contact-top{
+    display:none;
+}
+
+/* CONTENT */
+
+.contact-content{
+
+    padding:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.contact-description{
+
+    font-family:"RadioGrotesk";
+
+    font-size:1.2rem;
+
+    color:#4F5B6A;
+
+    text-align:left;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+    max-width:560px;
+}
+
+/* CONTACT ITEM */
+
+.contact-item{
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:16px;
+
+    width:100%;
+    max-width:520px;
+    padding:14px 18px;
+    border-radius:999px;
+    background:rgba(154, 187, 224, .28);
+    transition:transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+}
+
+.contact-item:hover{
+    transform:translateX(6px);
+    background:rgba(154, 187, 224, .42);
+    box-shadow:0 12px 24px rgba(58, 76, 98, .12);
+}
+
+.contact-item i{
+
+    font-size:1.4rem;
+
+    color:#4F5B6A;
+
+    width:34px;
+    height:34px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#F8F4E8;
+}
+
+.contact-item a{
+
+    text-decoration:none;
+
+    color:#4F5B6A;
+
+    font-family:"RadioGrotesk";
+
+    font-size:1.65rem;
+
+    transition:0.3s;
+}
+
+.contact-item a:hover{
+
+    color:#9ABBE0;
+}
+
+/* EMAIL */
+
+.contact-item:last-child a{
+
+    font-size:1.55rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .contact-card{
+        width:100%;
+        padding:34px 26px 34px;
+    }
+
+    .contact-title{
+        font-size:5rem;
+    }
+
+    .contact-item a{
+        font-size:1.5rem;
+    }
+
+    .contact-item:last-child a{
+        font-size:1.3rem;
+    }
+}
+
+.contact-card{
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 30px 54px rgba(58, 76, 98, .2);
+}
+
+.contact-page{
+    overflow:hidden;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.contact-item i{
+    font-size:1.4rem;
+    color:#4F5B6A;
+    width:34px;
+    text-align:center;
+}
+
+body{
+    animation:slideIn .6s ease;
+}
+
+body{
+    opacity:0;
+    animation:fadeIn .5s forwards;
+}
+
+body.fade-out{
+    opacity:0;
+    transition:.3s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin:15px 0;
+}
+
+.dots span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#D9D9D9;
+}
+
+.dots span.active{
+    background:#9ABBE0;
+}
+
+/* =====================
+   POLISHED INTERACTIONS
+===================== */
+
+body{
+    animation:pageRise .55s ease forwards;
+}
+
+.navbar,
+.about-card,
+.experience-card,
+.project-card,
+.paper-card,
+.contact-card,
+.polaroid-front,
+.polaroid-back{
+    transition:
+        transform .32s ease,
+        box-shadow .32s ease,
+        border-color .32s ease,
+        background-color .32s ease;
+}
+
+.navbar a,
+.hero-btn,
+.about-btn,
+.paper-btn,
+.slider-btn,
+.pdf-open-link,
+.pdf-close{
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background-color .25s ease,
+        color .25s ease,
+        opacity .25s ease;
+}
+
+.hero-btn:hover,
+.about-btn:hover,
+.paper-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 24px rgba(60, 76, 95, .18);
+}
+
+.about-card:hover,
+.project-card:hover,
+.paper-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 38px rgba(60, 76, 95, .16);
+}
+
+.polaroid-stack:hover .polaroid-front{
+    transform:rotate(-5deg) translateY(-8px);
+}
+
+.polaroid-stack:hover .polaroid-back{
+    transform:rotate(11deg) translate(6px, 4px);
+}
+
+.about-btn{
+    border:1px solid #333;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.button-group{
+    flex-wrap:wrap;
+}
+
+.project-card{
+    border-radius:22px;
+    padding:0 28px 30px;
+}
+
+.project-preview{
+    aspect-ratio:16 / 10;
+    box-shadow:0 16px 30px rgba(60, 76, 95, .12);
+    overflow:hidden;
+}
+
+.project-preview::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border-radius:14px;
+    pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);
+}
+
+.gallery-track{
+    width:100%;
+    height:100%;
+    position:relative;
+    border-radius:14px;
+    overflow:hidden;
+    background:#E8F1F9;
+}
+
+.gallery-slide{
+    position:absolute;
+    inset:0;
+    height:100%;
+    background:#E8F1F9;
+    opacity:0;
+    transform:scale(1.04);
+    transition:
+        opacity .52s ease,
+        transform .72s cubic-bezier(.22, 1, .36, 1);
+    pointer-events:none;
+}
+
+.gallery-slide.active{
+    opacity:1;
+    transform:scale(1);
+    z-index:1;
+}
+
+.gallery-slide.previous{
+    transform:scale(.985);
+}
+
+.gallery-slide img,
+.project-preview img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.slider-btn{
+    z-index:3;
+    display:grid;
+    place-items:center;
+    color:#4C5B6C;
+    border:1px solid rgba(60, 76, 95, .35);
+    box-shadow:0 8px 18px rgba(60, 76, 95, .18);
+}
+
+.slider-btn:hover{
+    background:#9ABBE0;
+    color:#F8F4E8;
+    transform:translateY(-50%) scale(1.08);
+}
+
+.prev,
+.left{
+    left:0;
+}
+
+.next,
+.right{
+    right:0;
+}
+
+.dots{
+    min-height:16px;
+}
+
+.dots button{
+    width:9px;
+    height:9px;
+    border:0;
+    border-radius:999px;
+    background:#DCE3EA;
+    cursor:pointer;
+    transition:width .25s ease, background-color .25s ease, transform .25s ease;
+}
+
+.dots button:hover{
+    transform:scale(1.2);
+}
+
+.dots button.active{
+    width:28px;
+    background:#4C5B6C;
+}
+
+.pdf-modal{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease;
+}
+
+.pdf-modal.is-open{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.pdf-backdrop{
+    position:absolute;
+    inset:0;
+    background:rgba(42, 54, 68, .58);
+    backdrop-filter:blur(8px);
+}
+
+.pdf-dialog{
+    position:relative;
+    width:min(880px, calc(100vw - 48px));
+    height:min(70vh, 680px);
+    max-height:calc(100vh - 64px);
+    background:#F8F4E8;
+    border:1px solid #3c4c5f;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(28, 40, 54, .34);
+    transform:translateY(0) scale(.98);
+    transition:transform .28s ease;
+}
+
+.pdf-modal.is-open .pdf-dialog{
+    transform:translateY(0) scale(1);
+}
+
+.pdf-toolbar{
+    height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:14px 18px 14px 24px;
+    background:#9ABBE0;
+    border-bottom:1px solid #3c4c5f;
+}
+
+.pdf-label{
+    display:block;
+    color:#F8F4E8;
+    font-size:.8rem;
+    letter-spacing:0;
+    opacity:.86;
+}
+
+.pdf-toolbar h3{
+    font-family:"RadioGrotesk";
+    font-size:1.8rem;
+    color:#F8F4E8;
+    line-height:1;
+}
+
+.pdf-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.pdf-open-link,
+.pdf-close{
+    display:inline-grid;
+    place-items:center;
+    min-height:40px;
+    border:1px solid rgba(60, 76, 95, .5);
+    background:#F8F4E8;
+    color:#4C5B6C;
+    text-decoration:none;
+    font-family:"RadioGrotesk";
+    cursor:pointer;
+}
+
+.pdf-open-link{
+    padding:0 16px;
+    border-radius:999px;
+}
+
+.pdf-close{
+    width:40px;
+    border-radius:50%;
+    font-size:1.6rem;
+    line-height:1;
+}
+
+.pdf-open-link:hover,
+.pdf-close:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(60, 76, 95, .2);
+}
+
+.pdf-status,
+.pdf-fallback{
+    position:absolute;
+    inset:76px 0 0;
+    display:grid;
+    place-items:center;
+    align-content:center;
+    gap:16px;
+    padding:24px;
+    text-align:center;
+    color:#4C5B6C;
+    background:#F8F4E8;
+    z-index:2;
+}
+
+#pdfModal[data-mode="new-tab"] .pdf-dialog{
+    width:min(620px, calc(100vw - 48px));
+    height:auto;
+    min-height:260px;
+}
+
+#pdfModal[data-mode="new-tab"] .pdf-frame{
+    display:none;
+}
+
+.pdf-status.is-hidden{
+    opacity:0;
+    pointer-events:none;
+}
+
+.loader{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:4px solid rgba(154, 187, 224, .28);
+    border-top-color:#4C5B6C;
+    animation:spin .9s linear infinite;
+}
+
+.pdf-frame{
+    width:100%;
+    height:calc(100% - 76px);
+    border:0;
+    opacity:0;
+    transition:opacity .25s ease;
+}
+
+.pdf-frame.is-ready{
+    opacity:1;
+}
+
+.portfolio-dialog{
+    width:min(1080px, calc(100vw - 48px));
+    height:auto;
+    max-height:calc(100vh - 48px);
+    overflow:auto;
+}
+
+.portfolio-modal-body{
+    padding:22px;
+    background:#F8F4E8;
+}
+
+.portfolio-modal-card{
+    margin:0;
+    padding:0 0 12px;
+    border-radius:18px;
+    background:transparent;
+    box-shadow:none;
+}
+
+.portfolio-modal-preview{
+    width:100%;
+    padding:14px;
+    border-radius:18px;
+}
+
+.portfolio-modal-preview::after{
+    inset:14px;
+}
+
+.portfolio-download{
+    min-width:120px;
+}
+
+.pdf-fallback{
+    display:none;
+    z-index:3;
+}
+
+.pdf-fallback.is-visible{
+    display:grid;
+}
+
+.pdf-fallback a{
+    color:#4C5B6C;
+    font-family:"RadioGrotesk";
+}
+
+.modal-open{
+    overflow:hidden;
+}
+
+#working-experience{
+    padding:72px 70px 110px;
+}
+
+#working-experience .working-title{
+    margin-top:0;
+    margin-bottom:72px;
+}
+
+#working-experience .experience-container{
+    display:flex;
+    flex-direction:column;
+    gap:72px;
+}
+
+#working-experience .experience-row,
+#working-experience .experience-row.reverse{
+    display:grid;
+    grid-template-columns:minmax(0, 1.45fr) minmax(220px, .55fr);
+    align-items:center;
+    gap:72px;
+    margin-bottom:0;
+}
+
+#working-experience .experience-row.reverse{
+    grid-template-columns:minmax(220px, .55fr) minmax(0, 1.45fr);
+}
+
+#working-experience .experience-card{
+    width:min(680px, 100%);
+    justify-self:start;
+    display:block;
+    align-items:stretch;
+    position:relative;
+    overflow:visible;
+    border:0;
+    border-radius:22px;
+    background:rgba(248, 244, 232, .86);
+    padding:28px 30px 30px;
+    box-shadow:0 24px 46px rgba(58, 76, 98, .18);
+}
+
+#working-experience .experience-row.reverse .experience-card{
+    justify-self:end;
+}
+
+#working-experience .experience-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:26px;
+    bottom:26px;
+    width:8px;
+    border-radius:0 999px 999px 0;
+    background:#5BA8B3;
+}
+
+#working-experience .experience-card::after{
+    content:"";
+    position:absolute;
+    right:26px;
+    top:24px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:rgba(154, 187, 224, .45);
+    box-shadow:-18px 18px 0 rgba(91, 168, 179, .16);
+}
+
+#working-experience .card-header{
+    width:auto;
+    min-height:0;
+    display:inline-flex;
+    align-items:center;
+    max-width:calc(100% - 72px);
+    margin-bottom:18px;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:#4C5B6C;
+    font-size:2rem;
+    line-height:1.12;
+    overflow:visible;
+}
+
+#working-experience .card-content{
+    padding:0;
+}
+
+#working-experience .card-content h4{
+    display:inline-flex;
+    margin-bottom:18px;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#9ABBE0;
+    color:#F8F4E8;
+    line-height:1.25;
+    font-size:1rem;
+}
+
+#working-experience .card-content p{
+    line-height:1.75;
+    text-align:left;
+    max-width:58ch;
+}
+
+#working-experience .company-logo{
+    width:min(260px, 100%);
+    justify-self:center;
+    padding:22px;
+    border-radius:24px;
+    background:rgba(248, 244, 232, .56);
+    box-shadow:0 18px 34px rgba(58, 76, 98, .14);
+    transition:transform .28s ease, box-shadow .28s ease;
+}
+
+#working-experience .company-logo:hover{
+    transform:translateY(-8px) rotate(-2deg);
+    box-shadow:0 28px 48px rgba(58, 76, 98, .18);
+}
+
+@media(max-width:900px){
+    #working-experience{
+        padding:64px 24px 90px;
+    }
+
+    #working-experience .working-title{
+        margin-bottom:48px;
+    }
+
+    #working-experience .experience-container{
+        gap:44px;
+    }
+
+    #working-experience .experience-row,
+    #working-experience .experience-row.reverse{
+        display:flex;
+        flex-direction:column;
+        gap:24px;
+    }
+
+    #working-experience .experience-row.reverse .company-logo{
+        order:2;
+    }
+
+    #working-experience .experience-card{
+        width:100%;
+        padding:24px 22px 26px;
+        border-radius:18px;
+    }
+
+    #working-experience .card-header{
+        max-width:100%;
+        font-size:1.6rem;
+    }
+
+    #working-experience .company-logo{
+        width:min(220px, 80%);
+    }
+}
+
+@keyframes pageRise{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@media(max-width:1050px){
+    .projects-grid{
+        grid-template-columns:minmax(0, 500px);
+        gap:56px;
+    }
+
+    .project-card{
+        width:100%;
+        max-width:500px;
+    }
+
+    .experience-grid{
+        gap:24px;
+    }
+
+    .experience-card img{
+        width:260px;
+    }
+}
+
+@media(max-width:700px){
+    .navbar{
+        height:auto;
+        min-height:76px;
+        flex-wrap:wrap;
+        gap:18px 28px;
+        padding:18px;
+    }
+
+    .navbar a{
+        font-size:1.15rem;
+    }
+
+    .about-section,
+    .projects-section,
+    #working-experience,
+    #organization{
+        padding-left:22px;
+        padding-right:22px;
+    }
+
+    .about-section{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .left-column,
+    .right-column,
+    .polaroid-stack{
+        width:100%;
+    }
+
+    .about-section{
+        gap:34px;
+    }
+
+    .about-card{
+        padding:34px 26px 34px;
+    }
+
+    .about-title,
+    .projects-title,
+    .working-title{
+        font-size:4rem;
+    }
+
+    .polaroid-stack{
+        max-width:330px;
+        height:430px;
+        margin:0 auto;
+    }
+
+    .polaroid-front{
+        width:280px;
+        height:370px;
+    }
+
+    .polaroid-front img{
+        height:270px;
+    }
+
+    .polaroid-back{
+        width:260px;
+        height:330px;
+        left:58px;
+        top:76px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .about-btn{
+        width:100%;
+    }
+
+    .education-item,
+    .education-item.reverse{
+        flex-direction:column;
+    }
+
+    .education-item img{
+        width:100%;
+        max-width:220px;
+    }
+
+    .projects-section{
+        padding-top:54px;
+    }
+
+    .projects-grid{
+        grid-template-columns:minmax(0, 1fr);
+        justify-items:center;
+        gap:48px;
+    }
+
+    .project-preview{
+        padding:12px;
+        border-radius:16px;
+        width:100%;
+    }
+
+    .project-card{
+        padding:0 16px 26px;
+    }
+
+    .project-info{
+        padding-top:10px;
+    }
+
+    .project-footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .project-preview::after{
+        inset:12px;
+    }
+
+    .slider-btn{
+        width:38px;
+        height:38px;
+    }
+
+    .prev,
+    .left{
+        left:8px;
+    }
+
+    .next,
+    .right{
+        right:8px;
+    }
+
+    .pdf-modal{
+        padding:12px;
+    }
+
+    .pdf-dialog{
+        width:calc(100vw - 24px);
+        height:76vh;
+        border-radius:14px;
+    }
+
+    .pdf-toolbar{
+        height:auto;
+        min-height:92px;
+        align-items:flex-start;
+        flex-direction:column;
+        padding:16px;
+    }
+
+    .pdf-actions{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .pdf-open-link{
+        flex:1;
+    }
+
+    .pdf-status,
+    .pdf-fallback{
+        inset:92px 0 0;
+    }
+
+    .pdf-frame{
+        height:calc(100% - 92px);
+    }
+
+    .portfolio-dialog{
+        height:auto;
+        max-height:calc(100vh - 24px);
+    }
+
+    .portfolio-modal-body{
+        padding:14px;
+    }
+
+    .portfolio-modal-preview{
+        padding:10px;
+        border-radius:14px;
+    }
+
+    .portfolio-modal-preview::after{
+        inset:10px;
+    }
+
+    .portfolio-download{
+        flex:1;
+    }
+
+    .paper-card{
+        width:100%;
+        max-width:420px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+        transition-duration:.01ms !important;
+    }
+}
+
+/* Keep display page titles in their original typefaces. */
+.intro,
+.about-title{
+    font-family:"Coolvetica";
+}
+
+.name,
+.working-title,
+#working-experience .working-title,
+.experience-title,
+.projects-title,
+.contact-title,
+.org-title{
+    .working-title{
+    font-family:"Coolvetica";
+    font-size:6rem;
+    color:#FFFBEF;
+    margin-bottom:60px;
+    line-height:0.9;
+}
+
+.script{
+    font-family:"Transforma Script";
+}
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(248, 244, 232, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+body{
+    padding-top: 80px;
+}
+
+.word{
+    display:block;
+}
+
+.exp-title{
+    font-family:"Coolvetica";
+    font-size:7rem;
+    color:#9ABBE0;
+    line-height:0.8;
+    
+}
+
+.transcript{
+    font-family:"Transforma Script";
+
+    font-size:1em;      /* same size as parent */
+    color:inherit;      /* inherit blue color */
+    line-height:inherit;
+
+    display:inline-block;
+}
+
+.project-title{
+    text-align:center;
+    margin-bottom:100px;
+
+    color:#F8F4E8;
+    line-height:1;
+
+    /* center the title block */
+    width:100%;
+}
+
+.project-title .cool{
+    font-family:"Coolvetica";
+    font-size:7rem;
+}
+
+.project-title .transcript{
+    font-family:"Transforma Script";
+    font-size:7.8rem;
+    color:inherit;
+
+    display:inline-block;
+    margin-right:-0.08em;
+}
+
+.script-letter{
+    font-family:"Transforma Script";
+    color:inherit;
+    display:inline-block;
+
+    font-size:1.15em;
+    margin-right:-0.08em;
+    line-height:1;
+}
+
+.experience-title,
+.project-title{
+    font-family:"Coolvetica";
+}
+
+.name{
+    font-family:"Coolvetica";
+    font-size:10rem;
+    color:#F9F5E8;
+    line-height:.9;
+    margin-bottom:40px;
+        position:relative;
+    left:-10px;
+}
+
+.script-letter{
+    font-family:"Transforma Script";
+    color:inherit;
+
+    font-size:1.15em;
+    display:inline-block;
+
+    margin-right:-0.03em;
+}
+
+.contact-title{
+    font-family:"Coolvetica";
+    font-size:7rem;
+    color:#F8F4E8;
+    text-align:center;
+}
+
+.contact-title .script-letter{
+    font-family:"Transforma Script";
+}
+
+.contact-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.contact-item{
+    width:fit-content;
+    margin-bottom:16px;
+}
+
+@media(max-width:900px){
+
+    .about-section{
+        flex-direction:column;
+        align-items:center;
+        padding:50px 20px;
+    }
+
+    .left-column,
+    .right-column{
+        width:100%;
+    }
+
+    .polaroid-stack{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+}
+
+@media(max-width:900px){
+
+    .experience-row{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .experience-row.reverse{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:900px){
+
+    .contact-card{
+        width:95%;
+        padding:25px;
+    }
+
+    .contact-item{
+        width:100%;
+        max-width:100%;
+    }
+
+    .contact-item a{
+        font-size:1.1rem;
+        word-break:break-word;
+    }
+}

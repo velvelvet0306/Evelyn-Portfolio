@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contacts</a>
+
+</nav>
+
+<section class="about-section">
+
+    <div class="left-column">
+
+        <h2 class="about-title">
+            Get to<br>
+            Know me!
+        </h2>
+
+        <div class="polaroid-stack">
+
+            <div class="polaroid-back"></div>
+
+            <div class="polaroid-front">
+                <img src="Pictures/43435a34-af4c-4866-90a0-e22c9375bae5.png" alt="evelyn">
+            </div>
+
+        </div>
+
+        <div class="portfolio-gallery-card">
+            <div class="portfolio-gallery-header">
+                <span>My Skill</span>
+            </div>
+
+            <div class="project-preview portfolio-preview">
+                <button class="slider-btn prev" type="button" aria-label="Previous portfolio page">‹</button>
+
+                <div
+                    class="gallery-track"
+                    data-images="Pictures/skill/dev.png|Pictures/skill/design.png">
+                </div>
+
+                <button class="slider-btn next" type="button" aria-label="Next portfolio page">›</button>
+            </div>
+
+            <div class="dots" aria-label="Portfolio pages"></div>
+        </div>
+
+    </div>
+
+    <div class="right-column">
+
+        <div class="about-card">
+
+            <div class="card-header"></div>
+
+            <div class="card-body">
+
+                <h3>Hi, I'm Evelyn Simin</h3>
+
+                <p>
+                    An undergraduate student at Bina Nusantara University
+                    majoring in Computer Science. Throughout my academic
+                    journey, I have actively participated in several
+                    organizational activities that have helped me develop
+                    strong soft skills such as communication, leadership,
+                    and time management.
+                </p>
+
+                <div class="button-group">
+                    <button
+                        type="button"
+                        class="about-btn document-trigger"
+                        data-pdf="documents/Evelyn's CV.pdf"
+                        data-title="Evelyn's CV"
+                        data-mode="embed">
+                        View CV
+                    </button>
+
+                    <button
+                        type="button"
+                        class="about-btn document-trigger"
+                        data-pdf="documents/Evelyn Simin_Portfolio_Academy-compressed.pdf"
+                        data-title="Evelyn's Portfolio"
+                        data-mode="portfolio-gallery">
+                        View Portfolio
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="education">
+
+            <h3 class="education-title">
+                Education
+            </h3>
+
+            <div class="education-item">
+
+                <div class="education-content">
+                    <h4>
+                        • Bina Nusantara University
+                        <br>
+                        @Kemanggisan
+                    </h4>
+
+                    <span>(Sep 2024 - 2028)</span>
+
+                    <p>
+                        Majored in Computer Science,
+                        Minoring UI/UX Design
+                        <br>
+                        Current GPA : 3.47/4.00
+                    </p>
+                </div>
+
+                <img src="Pictures/WhatsApp Image 2026-06-01 at 18.28.18 (1).jpeg" alt="binus">
+            </div>
+
+            <div class="education-item">
+
+                <div class="education-content">
+                    <h4>
+                        • Ekayana Dharma Budhi Bhakti
+                        High School
+                    </h4>
+
+                    <span>(Jul 2021 - Jun 2024)</span>
+
+                    <p>
+                        Majored in Natural Science (MIPA)
+                        <br>
+                        Final Score : 91.3
+                        <br>
+                        Achievement : Best Mandarin Graduate
+                    </p>
+                </div>
+
+                <img src="Pictures/WhatsApp Image 2026-06-01 at 18.12.42.jpeg" alt="dbb">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="pdf-modal portfolio-modal" id="portfolioModal" aria-hidden="true">
+    <div class="pdf-backdrop" data-close-portfolio></div>
+
+    <section class="pdf-dialog portfolio-dialog" role="dialog" aria-modal="true" aria-labelledby="portfolioModalTitle">
+        <div class="pdf-toolbar portfolio-toolbar">
+            <div>
+                <span class="pdf-label">Preview</span>
+                <h3 id="portfolioModalTitle">Evelyn's Portfolio</h3>
+            </div>
+
+            <div class="pdf-actions">
+                <a
+                    href="documents/Evelyn Simin_Portfolio_Academy-compressed.pdf"
+                    class="pdf-open-link portfolio-download"
+                    download>
+                    Download
+                </a>
+                <button type="button" class="pdf-close" data-close-portfolio aria-label="Close portfolio preview">
+                    ×
+                </button>
+            </div>
+        </div>
+
+        <div class="portfolio-modal-body">
+            <div class="portfolio-gallery-card portfolio-modal-card">
+                <div class="project-preview portfolio-preview portfolio-modal-preview">
+                    <button class="slider-btn prev" type="button" aria-label="Previous portfolio page">‹</button>
+
+                    <div
+                        class="gallery-track"
+                        data-images="Pictures/portfolio-pages/portfolio-1.jpg|Pictures/portfolio-pages/portfolio-2.jpg|Pictures/portfolio-pages/portfolio-3.jpg|Pictures/portfolio-pages/portfolio-4.jpg|Pictures/portfolio-pages/portfolio-5.jpg|Pictures/portfolio-pages/portfolio-6.jpg|Pictures/portfolio-pages/portfolio-7.jpg|Pictures/portfolio-pages/portfolio-8.jpg|Pictures/portfolio-pages/portfolio-9.jpg">
+                    </div>
+
+                    <button class="slider-btn next" type="button" aria-label="Next portfolio page">›</button>
+                </div>
+
+                <div class="dots" aria-label="Portfolio pages"></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="pdf-modal" id="pdfModal" aria-hidden="true">
+    <div class="pdf-backdrop" data-close-pdf></div>
+
+    <section class="pdf-dialog" role="dialog" aria-modal="true" aria-labelledby="pdfTitle">
+        <div class="pdf-toolbar">
+            <div>
+                <span class="pdf-label">Preview</span>
+                <h3 id="pdfTitle">Document</h3>
+            </div>
+
+            <div class="pdf-actions">
+                <a href="#" class="pdf-open-link" target="_blank" rel="noopener">
+                    Open in New Tab
+                </a>
+                <button type="button" class="pdf-close" data-close-pdf aria-label="Close preview">
+                    ×
+                </button>
+            </div>
+        </div>
+
+        <div class="pdf-status" id="pdfStatus">
+            <div class="loader"></div>
+            <p>Preparing document preview...</p>
+        </div>
+
+        <iframe
+            class="pdf-frame"
+            id="pdfFrame"
+            title="Document preview"
+            loading="lazy">
+        </iframe>
+
+        <div class="pdf-fallback" id="pdfFallback">
+            <p>This document could not be previewed here.</p>
+            <a href="#" target="_blank" rel="noopener">Open the file in a new tab</a>
+        </div>
+    </section>
+</div>
+
+<script src="script.js?v=portfolio-gallery"></script>
+
+</body>
+
+</html>
