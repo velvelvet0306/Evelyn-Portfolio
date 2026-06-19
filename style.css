@@ -1326,13 +1326,14 @@ animation:
 ===================== */
 
 .contact-section{
-    min-height:calc(100vh - 85px);
+    min-height: calc(100vh - 85px);
 
-    background:linear-gradient(
-        to bottom,
-        #AFCBE5 0%,
-        #F8F4E8 100%
-    );
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
 
     position:relative;
     display:flex;
